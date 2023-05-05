@@ -1,6 +1,17 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-console.log(example, data);
+//import { example } from "./data.js";
+import data from "./data/lol/lol.js";
+const card = [];
+const fullData = Object.keys(data.data);
+for (let i = 0; i < fullData.length; i++) {
+  const nombres = fullData[i];
+  const tituloCampeon = fullData.title;
+  console.log(tituloCampeon);
+  card.push(`
+  <h1 >
+  ${nombres}
+  </h1>
+  `);
+  const contenedorCampeones = document.getElementById("campeones");
+  contenedorCampeones.innerHTML = card.join("");
+  console.log(nombres);
+}

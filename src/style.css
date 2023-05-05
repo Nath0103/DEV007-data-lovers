@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  /*background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(lol/gifs/71476294e8d1bfb9ae869acdd28e60b0.gif);*/
+}
+/*header*/
+.headerBarraNegra {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000;
+  margin-bottom: 50px;
+}
+.letraFondoOscuro {
+  color: #ffffff;
+  font-family: inherit;
+}
+.letraSpan {
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 20px;
+}
+.logo-lol {
+  width: 60px;
+  height: 60px;
+}
+
+/*BOTONES*/
+.btn__header {
+  border: none;
+  background-color: #ffffff00;
+}
+
+/*Centrar*/
+.text-center {
+  text-align: center;
+}
+
+/*CARD*/
+.card {
+  background-color: #421313;
+  color: #ffffff;
+  font-family: inherit;
+  height: 350px;
+  margin: 10px;
+  border-radius: 5px;
+}
+/*GRID*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+/*Mostrar y ocultar*/
+
+/*BOTON*/
