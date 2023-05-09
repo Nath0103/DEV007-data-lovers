@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   /*background-position: center;
@@ -11,10 +12,12 @@ body {
   justify-content: space-around;
   background-color: #000000;
   margin-bottom: 50px;
+  z-index: 3;
 }
 .letraFondoOscuro {
   color: #ffffff;
   font-family: inherit;
+  
 }
 .letraSpan {
   color: #ffffff;
@@ -24,12 +27,14 @@ body {
 .logo-lol {
   width: 60px;
   height: 60px;
+  z-index: 3;
 }
 
 /*BOTONES*/
 .btn__header {
   border: none;
   background-color: #ffffff00;
+  z-index: 3;
 }
 
 /*Centrar*/
@@ -56,3 +61,112 @@ body {
 /*Mostrar y ocultar*/
 
 /*BOTON*/
+
+/*------------PAGE JUEGO--------*/
+.pageInfoGame {
+  font-family: 'Roboto', sans-serif;
+}
+
+.text1 {
+  padding-top: 50px;
+}
+
+.text2 {
+  padding-top: 300px;
+}
+
+.text3 {
+  padding-top: 350px;
+}
+
+.text1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  position: relative; 
+  z-index: 2;
+
+  font-family: 'Roboto' sans-serif;
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #ffffff;
+  width: 90%;
+  text-align: center;
+}
+
+.text2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  position: relative; 
+  z-index: 2;
+
+  font-family: 'Roboto' sans-serif;
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #ffffff;
+  width: 90%;
+  text-align: center;
+}
+
+#video1 {
+  padding-top: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#video2 {
+  padding-top: 750px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#video3 {
+  padding-top: 1450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.text3{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+  position: relative; 
+  z-index: 2;
+
+  font-family: 'Roboto' sans-serif;
+  font-size: 80px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  color: #ffffff;
+  width: 90%;
+  text-align: center;
+}
+
+.parrafo {
+  font-size: 20px;
+  font-weight: 100;
+}
