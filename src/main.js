@@ -1,17 +1,36 @@
 //import { example } from "./data.js";
 import data from "./data/lol/lol.js";
 const card = [];
-const fullData = Object.keys(data.data);
-for (let i = 0; i < fullData.length; i++) {
-  const nombres = fullData[i];
-  const tituloCampeon = fullData.name;
-  console.log(tituloCampeon);
+const imgSize = 100;
+const fullData = Object.values(data.data); //tengo todos los datos limitamos la full data
+const arrayLimitado = fullData.slice(0, 19); //Limita toda la data
+
+arrayLimitado.forEach((element) => {
+  // element.slice(0, 19); //para limitarlo
+
   card.push(`
-  <h1 >
-  ${nombres}
-  </h1>
+  <div>
+  <h2>${element.name}</h2>
+  <img src="${element.img}" alt="img campeones"  width="${imgSize}">
+  </div>
   `);
-  const contenedorCampeones = document.getElementById("campeones");
+  const contenedorCampeones = document.getElementById("campeones-card");
   contenedorCampeones.innerHTML = card.join("");
-  console.log(nombres);
-}
+});
+//MUETRAS TODOS LOS CAMPEONES👇
+// const btnCampeones = document.getElementById("todosLosCampeones");
+// btnCampeones.addEventListener("click", () => {
+//   fullData.forEach((element) => {
+//     // const element = data.data[i];
+//     // element.slice(0, 19); //para limitarlo
+
+//     card.push(`
+//     <div>
+//     <h2>${element.name}</h2>
+//     <img src="${element.img}" alt="img campeones"  width="${imgSize}">
+//     </div>
+//     `);
+//     const contenedorCampeones = document.getElementById("campeones-card");
+//     contenedorCampeones.innerHTML = card.join("");
+//   });
+// });
