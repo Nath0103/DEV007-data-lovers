@@ -16,6 +16,7 @@ arrayLimitado.forEach((element) => {
   `);
   const contenedorCampeones = document.getElementById("campeones-card");
   contenedorCampeones.innerHTML = card.join("");
+
 });
 //MUETRAS TODOS LOS CAMPEONES👇
 // const btnCampeones = document.getElementById("todosLosCampeones");
