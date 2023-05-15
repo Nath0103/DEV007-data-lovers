@@ -12,14 +12,21 @@ body {
 h2 {
   margin: 0px;
 }
-
+main {
+  padding-top: 90px;
+}
 /*---------header----------*/
 .headerBarraNegra {
-  position: relative;
+  width: 100%;
+  position: fixed;
   display: flex;
   background-color: #000000;
   padding: 10px;
-  z-index: 3;
+  z-index: 5;
+}
+.position {
+  width: 100%;
+  position: fixed;
 }
 .letraFondoOscuro {
   color: #ffffff;
@@ -41,6 +48,7 @@ h2 {
 .footer {
   background-color: #000000;
   padding: 30px;
+  width: 100%;
 }
 /*----------CONTAINER MAIN----------*/
 .container {
@@ -73,10 +81,10 @@ h2 {
   font-size: 15px;
 }
 .logo_leagueOfLegends {
+  right: 0;
+  bottom: 0;
   position: absolute;
   width: 350px;
-  top: 70%;
-  left: 74%;
   z-index: 3;
 }
 
@@ -90,6 +98,7 @@ h2 {
 
 /*IMAGENES*/
 .imgFondo {
+  position: relative;
   width: 100%;
   background-image: url(lol/032123_Patch_13_6_Notes_Banner_v3.jpg);
 }
