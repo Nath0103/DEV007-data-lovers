@@ -37,3 +37,5 @@ btnCampeones.addEventListener("click", () => {
     contenedorCampeones.innerHTML = card.join("");
   });
 });
+
+    
