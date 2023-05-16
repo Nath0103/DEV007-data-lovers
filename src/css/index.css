@@ -200,7 +200,6 @@ h2 {
   -webkit-backdrop-filter: blur(2px);
 }
 
-<<<<<<< HEAD:src/style.css
 .card-algunosCampeones{
   display: flex;
   flex-direction: row;
@@ -209,7 +208,8 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 4;
-=======
+}
+
 @media screen and (max-width: 480px) {
   body {
     background-color: #421313;
@@ -229,5 +229,4 @@ h2 {
   body {
     background-color: #421313;
   }
->>>>>>> c204ee016fc69bb2491d3ad1f82ddbc87f265711:src/css/index.css
 }
