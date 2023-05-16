@@ -10,7 +10,7 @@ arrayLimitado.forEach((element) => {
   card.push(`
   <div>
   <h2>${element.name}</h2>
-  <img src="${element.splash}" alt="img campeones"  width="${imgSize}">
+  <img src="${element.img}" alt="img campeones"  width="${imgSize}">
   </div>
   `);
   const contenedorCampeones = document.getElementById("campeones-card");
@@ -35,3 +35,5 @@ btnCampeones.addEventListener("click", () => {
     contenedorCampeones.innerHTML = card.join("");
   });
 });
+
+    
