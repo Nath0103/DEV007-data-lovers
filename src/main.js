@@ -7,7 +7,6 @@ const arrayLimitado = fullData.slice(0, 20); //Limita toda la data
 
 arrayLimitado.forEach((element) => {
   // element.slice(0, 19); //para limitarlo
-
   card.push(`
   <div>
   <h2>${element.name}</h2>
@@ -16,9 +15,8 @@ arrayLimitado.forEach((element) => {
   `);
   const contenedorCampeones = document.getElementById("campeones-card");
   contenedorCampeones.innerHTML = card.join("");
-
 });
-//MUETRAS TODOS LOS CAMPEONES👇
+// MUETRAS TODOS LOS CAMPEONES👇
 
 const btnCampeones = document.getElementById("todosLosCampeones");
 btnCampeones.addEventListener("click", () => {
