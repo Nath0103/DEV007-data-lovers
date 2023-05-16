@@ -100,7 +100,6 @@ h2 {
 .imgFondo {
   position: relative;
   width: 100%;
-  background-image: url(lol/032123_Patch_13_6_Notes_Banner_v3.jpg);
 }
 /*----------BOTONES----------*/
 
@@ -200,4 +199,25 @@ h2 {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: #421313;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #421313;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: #421313;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: #421313;
+  }
 }
