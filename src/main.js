@@ -31,6 +31,34 @@ arrayLimitado.forEach((element) => {
   contenedorCampeones.innerHTML = card.join("");
 });
 
+// Obtener el contenedor del modal en el DOM
+const modal_container = document.getElementById("modal_container");
+
+// Función para mostrar el modal
+function modal() {
+  // Obtener todas las tarjetas de campeones en el DOM
+  const btnCard = document.querySelectorAll("#card-Campeones");
+
+  // Iterar sobre cada tarjeta de campeón
+  btnCard.forEach((element, i) => {
+    element.addEventListener("click", () => {
+      // INFOMODAL
+      const modal = document.getElementsByClassName("modal");
+      modal.appendChild = btnCard[i];
+
+      // Mostrar el modal
+      modal_container.classList.add("show");
+    });
+    const close = document.getElementById("close");
+    close.addEventListener("click", () => {
+      modal_container.classList.remove("show");
+    });
+  });
+}
+
+// Llamar a la función para mostrar el modal
+modal();
+
 // MUETRAS TODOS LOS CAMPEONES👇
 
 // Obtener el botón con el ID "todosLosCampeones"
@@ -60,16 +88,4 @@ btnCampeones.addEventListener("click", () => {
     // Actualizar el contenido del elemento con el HTML generado por "card" utilizando el método "join"
     contenedorCampeones.innerHTML = card.join("");
   });
-});
-
-const open = document.getElementById("open");
-const modal_container = document.getElementById("modal_container");
-const close = document.getElementById("close");
-
-open.addEventListener("click", () => {
-  modal_container.classList.add("show");
-});
-
-close.addEventListener("click", () => {
-  modal_container.classList.remove("show");
 });
