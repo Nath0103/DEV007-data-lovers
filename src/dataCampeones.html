@@ -9,7 +9,9 @@
 </head>
 
 <body>
-    <header class="headerBarraNegra ">
+    <!-- Encabezado con barra negra -->
+    <header class="headerBarraNegra">
+        <!-- Enlace al inicio -->
         <a href="index.html">
             <img src="lol/47210.png" alt="logo" class="logo-lol">
         </a>
@@ -41,15 +43,29 @@
     </header>
 
     <main class="main-position">
+        <!-- Contenedor para los campeones -->
         <section>
             <button id="todosLosCampeones">todos los campeones</button>
-
-        </section>
+        <!-- Botón para mostrar todos los campeones -->
+        <button id="todosLosCampeones" class="todosLosCampeones">todos los campeones</button>
+        
+        <div id="modal_container" class="modal-container">
+            <div id="modal" class="modal">
+                <h1>CAMPEON</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque assumenda dignissimos illo
+                    explicabo natus quia repellat, praesentium voluptatibus harum ipsam dolorem cumque labore sunt dicta
+                    consectetur, nesciunt maiores delectus maxime?
+                </p>
+                <button id="close">Cerrar</button>
+            </div>
+        </div>
         <div id="campeones-card" class="grid-container"></div>
     </main>
-    <footer class="footer"></footer>
-    <script src="main.js" type="module"></script>
 
+    <footer class="footer"></footer>
+
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
