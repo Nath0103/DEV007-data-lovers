@@ -1,6 +1,7 @@
 //import { example } from "./data.js";
 // Importar datos desde "./data/lol/lol.js"
 import data from "./data/lol/lol.js";
+import {cardsAsesinos, cardsLuchadores, cardsTanques, cardsMagos, cardsSoporte, cardsTiradores} from "./data.js";
 
 // Crear un arreglo vacío llamado "card"
 let card = [];
@@ -89,3 +90,27 @@ btnCampeones.addEventListener("click", () => {
     contenedorCampeones.innerHTML = card.join("");
   });
 });
+
+const justAsesinos = document.getElementById("asesinos");
+justAsesinos.addEventListener("click", (cardsAsesinos));
+
+const justLuchadores = document.getElementById("luchadores");
+justLuchadores.addEventListener("click", (cardsLuchadores));
+
+const justTanques = document.getElementById("tanques");
+justTanques.addEventListener("click", (cardsTanques));
+
+const justMagos = document.getElementById("magos");
+justMagos.addEventListener("click", (cardsMagos));
+
+const justSoporte = document.getElementById("soporte");
+justSoporte.addEventListener("click", (cardsSoporte));
+
+const justTiradores = document.getElementById("tiradores");
+justTiradores.addEventListener("click", (cardsTiradores));
+
+
+
+
+
+    

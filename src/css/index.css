@@ -126,7 +126,16 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+<<<<<<< HEAD
+
+/*Mostrar y ocultar */
+
+/*BOTON*/
+
+@media screen and (max-width: 480px) {
+=======
 @media screen and (max-width: 479px) {
+>>>>>>> 0c4a53400347c27059e456de3eec9a53c5560200
   body {
     background-color: #cf2626;
     background-image: url();
