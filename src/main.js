@@ -8,115 +8,88 @@ import {
   cardsMagos,
   cardsSoporte,
   cardsTiradores,
+  dataReversa,
 } from "./data.js";
 
-// Crear un arreglo vacío llamado "card"
 let card = [];
-// Obtener los valores de la propiedad "data" del objeto "data"
 const fullData = Object.values(data.data);
-
-// Limitar los datos a un subconjunto de elementos
 const arrayLimitado = fullData.slice(0, 9);
 
-// Iterar sobre cada elemento del arreglo "arrayLimitado"
-arrayLimitado.forEach((element) => {
-  // Agregar contenido HTML al arreglo "card" usando template literals
-  card.push(`
-    <div id="card-Campeones" class="containerCard">
-      <section class="card">
-        <h2>${element.name}</h2>
-        <span>${element.title}</span>
-        <img src="${element.splash}" alt="img campeones" class="pic">
-        <button></button>
-      </section>
-    </div>
-  `);
-
-  // Obtener el elemento del DOM con el ID "campeones-card"
-  const contenedorCampeones = document.getElementById("campeones-card");
-
-  // Actualizar el contenido del elemento con el HTML generado por "card" utilizando el método "join"
-  contenedorCampeones.innerHTML = card.join("");
-});
-
-/*----------      MODAL      ---------- */
-// Obtener el contenedor del modal en el DOM
-const modal_container = document.getElementById("modal_container");
-
-// Función para mostrar el modal
-
-function modal() {
-  // Obtener todas las tarjetas de campeones en el DOM
-  const btnCard = document.querySelectorAll("#card-Campeones");
-
-  // Iterar sobre cada tarjeta de campeón
-  btnCard.forEach((element, i) => {
-    element.addEventListener("click", () => {
-      // INFOMODAL
-      const modal = document.getElementsByClassName("modal");
-      modal.appendChild = btnCard[i];
-      console.log("hola");
-      // Mostrar el modal
-      modal_container.classList.remove("modal-container");
-      modal_container.classList.add("show");
-    });
-    const close = document.getElementById("close");
-    close.addEventListener("click", () => {
-      modal_container.classList.remove("show");
-    });
-  });
-}
-
-// Llamar a la función para mostrar el modal
-modal();
-
+campeonesCard(arrayLimitado);
 /*----------      MUESTRA TODOS LOS CAMPEONES      ---------- */
 
-// Obtener el botón con el ID "todosLosCampeones"
 const btnCampeones = document.getElementById("todosLosCampeones");
 
-// Agregar un evento de escucha al hacer clic en el botón
 btnCampeones.addEventListener("click", () => {
-  // Vaciar el arreglo "card"
-  card = [];
-  // Iterar sobre cada elemento en "fullData"
-  fullData.forEach((element) => {
-    // Agregar contenido HTML al arreglo "card" usando template literals
-    card.push(`
-      <div class="containerCard">
-        <section class="card">
-          <h2>${element.name}</h2>
-          <span>${element.title}</span>
-          <img src="${element.splash}" alt="img campeones" class="pic"><button></button>
-        </section>
-      </div>
-    `);
-
-    // Obtener el elemento del DOM con el ID "campeones-card"
-    const contenedorCampeones = document.getElementById("campeones-card");
-
-    // Actualizar el contenido del elemento con el HTML generado por "card" utilizando el método "join"
-    contenedorCampeones.innerHTML = card.join("");
-  });
+  campeonesCard(fullData);
 });
 
+function campeonesCard(dataFilter) {
+  card = [];
+  dataFilter.forEach((element) => {
+    card.push(`
+        <div class="containerCard">
+          <section class="card">
+            <h2>${element.name}</h2>
+            <span>${element.title}</span>
+            <img src="${element.splash}" alt="img campeones" class="pic"><button></button>
+          </section>
+        </div>
+      `);
+
+    const contenedorCampeones = document.getElementById("campeones-card");
+
+    contenedorCampeones.innerHTML = card.join("");
+  });
+  // });
+}
 /*----------      Data Reverse     ---------- */
+//otro metodo para alicar el reverse(metodo)
 
 /*----------      Filter      ---------- */
 const justAsesinos = document.getElementById("asesinos");
-justAsesinos.addEventListener("click", cardsAsesinos);
+justAsesinos.addEventListener("click", () => {
+  const filterCampeones = cardsAsesinos(fullData);
+  campeonesCard(filterCampeones);
+});
 
 const justLuchadores = document.getElementById("luchadores");
-justLuchadores.addEventListener("click", cardsLuchadores);
+justLuchadores.addEventListener("click", () => {
+  const filterCampeones = cardsLuchadores(fullData);
+  campeonesCard(filterCampeones);
+});
 
 const justTanques = document.getElementById("tanques");
-justTanques.addEventListener("click", cardsTanques);
-
+justTanques.addEventListener("click", () => {
+  const filterCampeones = cardsTanques(fullData);
+  campeonesCard(filterCampeones);
+});
 const justMagos = document.getElementById("magos");
-justMagos.addEventListener("click", cardsMagos);
-
+justMagos.addEventListener("click", () => {
+  const filterCampeones = cardsMagos(fullData);
+  campeonesCard(filterCampeones);
+});
 const justSoporte = document.getElementById("soporte");
-justSoporte.addEventListener("click", cardsSoporte);
-
+justSoporte.addEventListener("click", () => {
+  const filterCampeones = cardsSoporte(fullData);
+  campeonesCard(filterCampeones);
+});
 const justTiradores = document.getElementById("tiradores");
-justTiradores.addEventListener("click", cardsTiradores);
+justTiradores.addEventListener("click", () => {
+  const filterCampeones = cardsTiradores(fullData);
+  campeonesCard(filterCampeones);
+});
+
+// const btnAsendente = document.getElementById("ordenAsendente");
+const btnDesendente = document.getElementById("ordenDesendente");
+
+btnDesendente.addEventListener("click", () => {
+  const campeonesDesendente = dataReversa(arrayLimitado);
+  campeonesCard(campeonesDesendente);
+});
+/* 
+btnAsendente.addEventListener("click", () => {
+  const campeoneAsesendente = dataReversa(arrayLimitado);
+  campeonesCard(arrayLimitado);
+});
+ */
