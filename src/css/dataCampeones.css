@@ -1,48 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
 
+/*----------MENUUUUU Y BUSCADORRRR----*/
 
+.container-menu {
+  display: flex;
+  width: 100%;
+}
+.option-menu {
+  width: 90%;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  gap: 0 15px;
+  justify-content: center;
+}
 
-  /*----------MENUUUUU Y BUSCADORRRR----*/
+.items {
+  padding: 18px 12px;
+  position: relative;
 
-  .container-menu {
-    display: flex;
-    width: 100%;
-  }
-  .option-menu{
-    width: 90%;
-    margin: 0;
-    align-items: center;
-    display: flex;
-    gap: 0 15px;
-    justify-content: center;
-  }
+  display: flex;
+  align-items: center;
+}
 
-  .items {
-    padding: 18px 12px;
-    position: relative;
+.filtrar-campeones {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: medium;
+}
+.inputBuscar {
+  background-color: #ffffff00;
+  border: none;
+}
 
-    display: flex;
-    align-items: center;
-  }
-
-  .filtrar-campeones {
-    background-color: transparent;
-    color: #ffffff;
-    border: none;
-    font-size: medium;
-  }
-
-  .container-seacher {
-    margin-right: 30px;
-    align-items: center;
-    display: flex;
-    gap: 0 15px;
-    justify-content: center;
-  }
+.container-seacher {
+  background-color: #64646482;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+:root {
+  --color1: rgb(195, 144, 49);
 }
 .main-position {
   padding-top: 110px;
@@ -181,36 +188,14 @@
   filter: grayscale(0);
   transform: scale(1.4);
 }
-/*
-  
-  cuando se aga click al campeon que el fondo se coloque de ese man XD
-  */
-/*--------------modal----------------*/
-
-.show {
-  pointer-events: auto;
-  opacity: 1;
-}
-.modal-container {
+.flex {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.3);
-  align-items: center;
+  width: 100%;
+  height: 100%;
   justify-content: center;
-  position: fixed;
-  pointer-events: none;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  transition: opacity 0.3s ease;
+  align-items: center;
 }
-.modal {
-  background-color: #fff;
-  width: 600px;
-  max-width: 100%;
-  padding: 30px 50px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  text-align: center;
+.btnsFilter {
+  margin-bottom: 40px;
 }
+/*estilos lol*/
