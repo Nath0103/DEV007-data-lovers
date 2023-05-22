@@ -14,7 +14,7 @@ const arrayLimitado = fullData.slice(0, 9);
 arrayLimitado.forEach((element) => {
   // Agregar contenido HTML al arreglo "card" usando template literals
   card.push(`
-    <div class="containerCard">
+    <div id="card-Campeones" class="containerCard">
       <section class="card">
         <h2>${element.name}</h2>
         <span>${element.title}</span>
@@ -31,10 +31,12 @@ arrayLimitado.forEach((element) => {
   contenedorCampeones.innerHTML = card.join("");
 });
 
+/*----------      MODAL      ---------- */
 // Obtener el contenedor del modal en el DOM
 const modal_container = document.getElementById("modal_container");
 
 // Función para mostrar el modal
+
 function modal() {
   // Obtener todas las tarjetas de campeones en el DOM
   const btnCard = document.querySelectorAll("#card-Campeones");
@@ -45,8 +47,9 @@ function modal() {
       // INFOMODAL
       const modal = document.getElementsByClassName("modal");
       modal.appendChild = btnCard[i];
-
+      console.log("hola");
       // Mostrar el modal
+      modal_container.classList.remove("modal-container");
       modal_container.classList.add("show");
     });
     const close = document.getElementById("close");
@@ -59,7 +62,7 @@ function modal() {
 // Llamar a la función para mostrar el modal
 modal();
 
-// MUETRAS TODOS LOS CAMPEONES👇
+/*----------      MUESTRA TODOS LOS CAMPEONES      ---------- */
 
 // Obtener el botón con el ID "todosLosCampeones"
 const btnCampeones = document.getElementById("todosLosCampeones");
@@ -68,7 +71,6 @@ const btnCampeones = document.getElementById("todosLosCampeones");
 btnCampeones.addEventListener("click", () => {
   // Vaciar el arreglo "card"
   card = [];
-
   // Iterar sobre cada elemento en "fullData"
   fullData.forEach((element) => {
     // Agregar contenido HTML al arreglo "card" usando template literals
@@ -89,3 +91,7 @@ btnCampeones.addEventListener("click", () => {
     contenedorCampeones.innerHTML = card.join("");
   });
 });
+
+/*----------      Data Reverse     ---------- */
+
+/*----------      Filter      ---------- */
