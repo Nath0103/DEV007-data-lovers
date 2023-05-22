@@ -2,7 +2,7 @@ import data from "./data/lol/lol.js";
 // Obtenemos todos los datos del objeto data
 const fullData = Object.values(data.data);
 
-const imgSize = 100; // Tamaño de las imágenes de los campeones (puedes cambiarlo según las necesidades)
+const imgSize = 180; // Tamaño de las imágenes de los campeones (puedes cambiarlo según las necesidades)
 
 const cardPage3 = []; // Array donde almacenaremos las tarjetas de los campeones
 
@@ -12,10 +12,10 @@ const campeonesEnJuego = fullData.slice(0, 4);
 // Recorremos los campeones y creamos las tarjetas para cada uno
 campeonesEnJuego.forEach((element) => {
   cardPage3.push(`
-    <div>
-      <h3>${element.name}</h3>
-      <img src="${element.img}" alt="img campeones" width="${imgSize}">
-    </div>
+  <div class="cards">
+  <img src="${element.img}" alt="img campeones"  width="${imgSize}">
+  <h4>${element.name}</h4>
+  </div>
   `);
 
   // Obtenemos el elemento del DOM donde queremos mostrar las tarjetas de los campeones
