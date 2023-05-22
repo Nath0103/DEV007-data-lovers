@@ -1,13 +1,8 @@
 import data from "./data/lol/lol.js";
-<<<<<<< HEAD
-const fullData = Object.values(data.data); //tengo todos los datos limitamos la full data
-const imgSize = 280; //cambiar el tamaño
-=======
 // Obtenemos todos los datos del objeto data
 const fullData = Object.values(data.data);
 
 const imgSize = 280; // Tamaño de las imágenes de los campeones (puedes cambiarlo según las necesidades)
->>>>>>> c9c36517f5931739a9de4cf7848a5e962b394a11
 
 const cardPage3 = []; // Array donde almacenaremos las tarjetas de los campeones
 
