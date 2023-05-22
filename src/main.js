@@ -91,7 +91,6 @@ btnCampeones.addEventListener("click", () => {
   });
 });
 
-
 const justAsesinos = document.getElementById("asesinos");
 justAsesinos.addEventListener("click", (cardsAsesinos));
 
