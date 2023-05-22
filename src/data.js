@@ -9,13 +9,13 @@ const fullData = Object.values(data.data); //tengo todos los datos limitamos la 
 console.log(tags);*/
 
 export function cardsAsesinos (data, condition) {
-  const cardsAsesinos = fullData.filter(asesinos => asesinos.tags =="Assassin");
-  console.log(cardsAsesinos);
+  const cardsAsesinos = fullData.filter(asesinos => asesinos.tags.includes("Assassin"));
+  return cardsAsesinos;
 };
 
 export function cardsLuchadores (data, condition) {
   const cardsLuchadores = fullData.filter(luchadores => luchadores.tags.includes("Fighter"));
-  console.log(cardsLuchadores);
+  return cardsLuchadores;
 };
 
 export function cardsTanques (data, condition) {

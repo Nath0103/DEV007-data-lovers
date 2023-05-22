@@ -93,6 +93,7 @@ btnCampeones.addEventListener("click", () => {
 
 const justAsesinos = document.getElementById("asesinos");
 justAsesinos.addEventListener("click", (cardsAsesinos));
+console.log(cardsAsesinos);
 
 const justLuchadores = document.getElementById("luchadores");
 justLuchadores.addEventListener("click", (cardsLuchadores));
@@ -109,8 +110,3 @@ justSoporte.addEventListener("click", (cardsSoporte));
 const justTiradores = document.getElementById("tiradores");
 justTiradores.addEventListener("click", (cardsTiradores));
 
-
-
-
-
-    
