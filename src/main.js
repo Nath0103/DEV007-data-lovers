@@ -80,16 +80,9 @@ justTiradores.addEventListener("click", () => {
   campeonesCard(filterCampeones);
 });
 
-// const btnAsendente = document.getElementById("ordenAsendente");
-const btnDesendente = document.getElementById("ordenDesendente");
+const ordenarSelect = document.getElementById("ordenar-select");
 
-btnDesendente.addEventListener("click", () => {
-  const campeonesDesendente = dataReversa(arrayLimitado);
+ordenarSelect.addEventListener("change", () => {
+  const campeonesDesendente = dataReversa(fullData);
   campeonesCard(campeonesDesendente);
 });
-/* 
-btnAsendente.addEventListener("click", () => {
-  const campeoneAsesendente = dataReversa(arrayLimitado);
-  campeonesCard(arrayLimitado);
-});
- */
