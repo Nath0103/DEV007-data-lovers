@@ -1,5 +1,4 @@
-// estas funciones son de ejemplo
-// import data from "./data/lol/lol.js";
+/*----------      FILTER      ---------- */
 
 export function cardsAsesinos(fullData) {
   const cardsAsesinos = fullData.filter((asesinos) =>
@@ -40,8 +39,8 @@ export function cardsTiradores(fullData) {
   );
   return cardsTiradores;
 }
-
-export function dataReversa(fullData) {
-  const cardReversa = fullData.reverse();
-  return cardReversa;
+/*----------      ORDENAR DATA  ASCENDENTE Y DESCENDENTE     ---------- */
+export function ordenarSelect(fullData) {
+  const cardSelect = fullData.reverse();
+  return cardSelect;
 }

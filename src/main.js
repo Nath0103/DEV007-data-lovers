@@ -8,11 +8,12 @@ import {
   cardsMagos,
   cardsSoporte,
   cardsTiradores,
-  dataReversa,
+  ordenarSelect,
 } from "./data.js";
 
-let card = [];
 const fullData = Object.values(data.data);
+let card = [];
+/*----------      MUESTRA ARRAY LIMITADO      ---------- */
 const arrayLimitado = fullData.slice(0, 9);
 
 campeonesCard(arrayLimitado);
@@ -23,6 +24,8 @@ const btnCampeones = document.getElementById("todosLosCampeones");
 btnCampeones.addEventListener("click", () => {
   campeonesCard(fullData);
 });
+
+/*----------      FUNCTION CARD      ---------- */
 
 function campeonesCard(dataFilter) {
   card = [];
@@ -41,12 +44,16 @@ function campeonesCard(dataFilter) {
 
     contenedorCampeones.innerHTML = card.join("");
   });
-  // });
 }
-/*----------      Data Reverse     ---------- */
-//otro metodo para alicar el reverse(metodo)
+/*----------      ORDENAR DATA ASCENDENTE Y DESCENDENTE   ---------- */
+const cambioDeSelect = document.getElementById("ordenar-select");
 
-/*----------      Filter      ---------- */
+cambioDeSelect.addEventListener("change", () => {
+  const campeonesSelect = ordenarSelect(fullData);
+  campeonesCard(campeonesSelect);
+});
+
+/*----------      FILTER      ---------- */
 const justAsesinos = document.getElementById("asesinos");
 justAsesinos.addEventListener("click", () => {
   const filterCampeones = cardsAsesinos(fullData);
@@ -79,17 +86,3 @@ justTiradores.addEventListener("click", () => {
   const filterCampeones = cardsTiradores(fullData);
   campeonesCard(filterCampeones);
 });
-
-// const btnAsendente = document.getElementById("ordenAsendente");
-const btnDesendente = document.getElementById("ordenDesendente");
-
-btnDesendente.addEventListener("click", () => {
-  const campeonesDesendente = dataReversa(arrayLimitado);
-  campeonesCard(campeonesDesendente);
-});
-/* 
-btnAsendente.addEventListener("click", () => {
-  const campeoneAsesendente = dataReversa(arrayLimitado);
-  campeonesCard(arrayLimitado);
-});
- */
