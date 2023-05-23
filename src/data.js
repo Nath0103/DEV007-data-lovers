@@ -40,7 +40,29 @@ export function cardsTiradores(fullData) {
   return cardsTiradores;
 }
 /*----------      ORDENAR DATA  ASCENDENTE Y DESCENDENTE     ---------- */
-export function ordenarSelect(fullData) {
+/*export function ordenarSelect(fullData) {
   const cardSelect = fullData.reverse();
   return cardSelect;
+}*/
+
+export function ordenarSelect(data, order){
+  data.sort((a, b) => {
+    if (order === "asc") {
+      if (a.name < b.name ) {
+        return -1;
+      }
+      if (a.name > b.name ) {
+        return 1;
+      }
+    } else if (order === "desc") {
+      if (a.name > b.name){
+        return -1;
+      }
+      if (a.name < b.name){
+        return 1;
+      }
+    }   
+    return 0;
+  });
+  return data;
 }

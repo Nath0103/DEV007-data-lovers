@@ -49,7 +49,7 @@ function campeonesCard(dataFilter) {
 const cambioDeSelect = document.getElementById("ordenar-select");
 
 cambioDeSelect.addEventListener("change", () => {
-  const campeonesSelect = ordenarSelect(fullData);
+  const campeonesSelect = ordenarSelect(fullData, cambioDeSelect.value);
   campeonesCard(campeonesSelect);
 });
 

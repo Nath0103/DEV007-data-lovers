@@ -1,23 +1,23 @@
-import { example, anotherExample } from '../src/data.js';
+import { cardsAsesinos, cardsLuchadores, cardsTanques, cardsMagos, cardsSoporte, cardsTiradores, ordenarSelect, anotherExample } from '../src/data.js';
 
 
-describe('example', () => {
+describe('cardsAsesinos', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof cardsAsesinos).toBe('function');
   });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+  it('returns `cardsAsesinos`', () => {
+    expect(cardsAsesinos()).toBe('cardsAsesinos');
   });
 });
 
 
-describe('anotherExample', () => {
+describe('ordenarSelect', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof ordenarSelect).toBe('function');
   });
 
   it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+    expect(ordenarSelect()).toBe('OMG');
   });
 });
