@@ -1,10 +1,12 @@
 /*----------      FILTER      ---------- */
-
+//se crea una funcion para filtrar (que se va a exportar en este caso a la main.js) los campeones que son asesinos
 export function cardsAsesinos(fullData) {
-  const cardsAsesinos = fullData.filter((asesinos) =>
-    asesinos.tags.includes("Assassin")
+  //fullData = parametro que va a ser cambiado en la main.js
+  //creamos una constante que va a contener el parametro y despues se usa el metodo filter
+  const cardsAsesinos = fullData.filter(
+    (asesinos) => asesinos.tags.includes("Assassin") // 👆 (asesinos) va a recorrer (fulldata = parametro) y va a introducirse en tags y va a incluir solo a los campeones que consiga con el nombre Assassin
   );
-  return cardsAsesinos;
+  return cardsAsesinos; //retorna a todos Assassin
 }
 
 export function cardsLuchadores(fullData) {
@@ -44,8 +46,10 @@ export function cardsTiradores(fullData) {
   const cardSelect = fullData.reverse();
   return cardSelect;
 }*/
-
+//creamos una funcion que nos va a ordenar de manera ascendente y descendente en la data
 export function ordenarSelect(data, order) {
+  // se crean dos parametros 1-El primero parametro (data) nos indica a que le vamos a aplicar el metodo sort()
+  //al segundo valor en la main le pasamos (cambioDeSelect.value) nos indica si es ascendente o descendente
   data.sort((a, b) => {
     if (order === "asc") {
       if (a.name < b.name) {
@@ -66,25 +70,3 @@ export function ordenarSelect(data, order) {
   });
   return data;
 }
-
-// export function ordenarSelect(data, order) {
-//   data.sort((a, b) => {
-//     if (order === "asc") {
-//       if (a.name < b.name) {
-//         return -1;
-//       }
-//       if (a.name > b.name) {
-//         return 1;
-//       }
-//     } else if (order === "desc") {
-//       if (a.name > b.name) {
-//         return -1;
-//       }
-//       if (a.name < b.name) {
-//         return 1;
-//       }
-//     }
-//     return 0;
-//   });
-//   return data;
-// }
