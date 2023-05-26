@@ -1,5 +1,3 @@
-//import { example } from "./data.js";
-// Importar datos desde "./data/lol/lol.js"
 import data from "./data/lol/lol.js";
 import {
   cardsAsesinos,
@@ -12,6 +10,8 @@ import {
 } from "./data.js";
 
 const fullData = Object.values(data.data);
+const copiaData = fullData.slice(fullData);
+
 let card = [];
 /*----------      MUESTRA ARRAY LIMITADO      ---------- */
 const arrayLimitado = fullData.slice(0, 9);
@@ -49,7 +49,7 @@ function campeonesCard(dataFilter) {
 const cambioDeSelect = document.getElementById("ordenar-select");
 
 cambioDeSelect.addEventListener("change", () => {
-  const campeonesSelect = ordenarSelect(fullData);
+  const campeonesSelect = ordenarSelect(copiaData);
   campeonesCard(campeonesSelect);
 });
 
