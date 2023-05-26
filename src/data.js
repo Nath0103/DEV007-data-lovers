@@ -1,7 +1,7 @@
 /*----------      FILTER      ---------- */
 
-export function cardsAsesinos(fullData) {
-  const cardsAsesinos = fullData.filter((asesinos) =>
+export function cardsAsesinos(pepito) {
+  const cardsAsesinos = pepito.filter((asesinos) =>
     asesinos.tags.includes("Assassin")
   );
   return cardsAsesinos;
@@ -44,3 +44,25 @@ export function ordenarSelect(fullData) {
   const cardSelect = fullData.reverse();
   return cardSelect;
 }
+
+// export function ordenarSelect(data, order) {
+//   data.sort((a, b) => {
+//     if (order === "asc") {
+//       if (a.name < b.name) {
+//         return -1;
+//       }
+//       if (a.name > b.name) {
+//         return 1;
+//       }
+//     } else if (order === "desc") {
+//       if (a.name > b.name) {
+//         return -1;
+//       }
+//       if (a.name < b.name) {
+//         return 1;
+//       }
+//     }
+//     return 0;
+//   });
+//   return data;
+// }
