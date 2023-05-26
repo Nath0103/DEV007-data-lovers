@@ -3,6 +3,7 @@
 export function cardsAsesinos(pepito) {
   const cardsAsesinos = pepito.filter((asesinos) =>
     asesinos.tags.includes("Assassin")
+    
   );
   return cardsAsesinos;
 }
@@ -40,9 +41,31 @@ export function cardsTiradores(fullData) {
   return cardsTiradores;
 }
 /*----------      ORDENAR DATA  ASCENDENTE Y DESCENDENTE     ---------- */
-export function ordenarSelect(fullData) {
+/*export function ordenarSelect(fullData) {
   const cardSelect = fullData.reverse();
   return cardSelect;
+}*/
+
+export function ordenarSelect(data, order){
+  data.sort((a, b) => {
+    if (order === "asc") {
+      if (a.name < b.name ) {
+        return -1; // "A" va antes que "B"
+      }
+      if (a.name > b.name ) {
+        return 1; // "B" va antes que "A"
+      }
+    } else if (order === "desc") {
+      if (a.name > b.name){
+        return -1; //"B" va antes que "A"
+      }
+      if (a.name < b.name){
+        return 1; //"A" va antes que "B"
+      }
+    }   
+    return 0;
+  });
+  return data;
 }
 
 // export function ordenarSelect(data, order) {

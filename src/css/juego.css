@@ -74,7 +74,7 @@ h2 {
   overflow: hidden;
 }
 
-#videos-FondoLOL {
+#videos-FondoLOL1, #videos-FondoLOL2, #videos-FondoLOL3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -91,7 +91,7 @@ h2 {
   z-index: 3;
 }
 
-#text-juego {
+#text-juego1, #text-juego2, #text-juego3  {
   font-size: 80px;
   font-style: italic;
   text-align: center;

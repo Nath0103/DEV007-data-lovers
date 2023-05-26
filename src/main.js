@@ -49,7 +49,8 @@ function campeonesCard(dataFilter) {
 const cambioDeSelect = document.getElementById("ordenar-select");
 
 cambioDeSelect.addEventListener("change", () => {
-  const campeonesSelect = ordenarSelect(copiaData);
+  const campeonesSelect = ordenarSelect(copiaData, cambioDeSelect.value);
+  /*const campeonesSelect = ordenarSelect(copiaData);*/
   campeonesCard(campeonesSelect);
 });
 
