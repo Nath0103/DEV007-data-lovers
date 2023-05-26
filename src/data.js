@@ -3,6 +3,7 @@
 export function cardsAsesinos(fullData) {
   const cardsAsesinos = fullData.filter((asesinos) =>
     asesinos.tags.includes("Assassin")
+    
   );
   return cardsAsesinos;
 }
