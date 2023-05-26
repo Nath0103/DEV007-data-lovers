@@ -50,17 +50,17 @@ export function ordenarSelect(data, order){
   data.sort((a, b) => {
     if (order === "asc") {
       if (a.name < b.name ) {
-        return -1;
+        return -1; // "A" va antes que "B"
       }
       if (a.name > b.name ) {
-        return 1;
+        return 1; // "B" va antes que "A"
       }
     } else if (order === "desc") {
       if (a.name > b.name){
-        return -1;
+        return -1; //"B" va antes que "A"
       }
       if (a.name < b.name){
-        return 1;
+        return 1; //"A" va antes que "B"
       }
     }   
     return 0;

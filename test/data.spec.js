@@ -108,19 +108,39 @@ describe('ordenarSelect', () => {
   it('returns a sorted array', () => {
     expect(Array.isArray(ordenarSelect(fullData))).toBe(true);
   });
-  it ('returns data in ascending order (from A to Z)', () => {
-    expect(ordenarSelect(fullData,'asc')).toEqual([
-      { name: 'Aatrox' },
-      { name: 'Ahri' },
-      { name: 'Akali' },
+
+  /*it ('returns data in ascending order (from A to Z)', () => {
+    expect(ordenarSelect([{ name: 'C' }, { name: 'B' }, { name: 'A' }, { name: 'C' }],'asc')).toStrictEqual([
+      { name: 'A' },
+      { name: 'B' },
+      { name: 'C' },
+      { name: 'C' },
     ]);
   });
   it ('returns data in descending order (from Z to A)', () => {
-    expect(ordenarSelect(fullData, 'desc')).toEqual([
-      { name: 'Zyra' }, 
-      { name: 'Akali' },
-      { name: 'Ahri' },
+    expect(ordenarSelect([{ name: 'C' }, { name: 'B' }, { name: 'A' }, { name: 'C' }],'desc')).toStrictEqual([
+      { name: 'C' },
+      { name: 'C' },
+      { name: 'B' },
+      { name: 'A' },
+    ]);
+  });*/
+
+  it ('returns data in ascending order (from A to Z)', () => {
+    expect(ordenarSelect([{ name: 'Aatrox' }, { name: 'Ahri' }, { name: 'Akali' }, { name: 'Aatrox' }], 'asc')).toStrictEqual([
       { name: 'Aatrox' },
+      { name: 'Aatrox' },
+      { name: 'Ahri' },
+      { name: 'Akali' }
+    ]);
+  });
+  it ('returns data in descending order (from Z to A)', () => {
+    expect(ordenarSelect([{ name: 'Zyra' }, { name: 'Zilean' }, { name: 'Ziggs' }, { name: 'Zed' }, { name: 'Zyra' }], 'desc')).toStrictEqual([
+      { name: 'Zyra' }, 
+      { name: 'Zyra' }, 
+      { name: 'Zilean' },
+      { name: 'Ziggs' },
+      { name: 'Zed' },
     ]);
   });
 });
