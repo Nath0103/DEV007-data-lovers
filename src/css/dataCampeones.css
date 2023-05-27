@@ -205,6 +205,13 @@ option {
 }
 /*----------------------------------------------------*/
 @media screen and (max-width: 480px) {
+  .logo-lol {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    z-index: 3;
+  }
   .option-menu {
     width: 55%;
     margin: 0;
@@ -343,6 +350,13 @@ option {
     gap: 20px;
     justify-content: center;
     flex-direction: column;
+  }
+  .logo-lol {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    z-index: 3;
   }
   .filtrar-campeones {
     background-color: transparent;
