@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="css/juego.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Encabezado con barra negra -->
+    <header class="headerBarraNegra position">
+        <!-- Enlace al inicio -->
+        <a href="index.html">
+            <img src="lol/47210.png" alt="logo" class="logo-lol option-cursor">
+        </a>
+    </header>
+
+    <main>
+        <section class="pageInfoGame" id="pageInfoGame">
+            <section class="page-section">
+                <div class="text-section">
+                    <!-- Título "APRENDE SOBRE LOL" -->
+                    <h1 id="text-juego1">APRENDE SOBRE LOL</h1>
+                    <!-- Párrafo de descripción -->
+                    <p class="parrafo">Hay mucho que aprender sobre LoL, así que vamos a empezar por lo básico.</p>
+                </div>
+                <div class="container-video">
+                    <!-- Video de fondo -->
+                    <video id="videos-FondoLOL1" muted autoplay loop>
+                        <source src="./video/video_3.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="capa"></div>
+            </section>
+
+            <section class="page-section">
+                <div class="text-section">
+                    <!-- Título "¿QUÉ ES LEAGUE OF LEGENDS?" -->
+                    <h1 id="text-juego2">¿QUÉ ES LEAGUE OF LEGENDS?</h1>
+                    <!-- Párrafo de descripción -->
+                    <p class="parrafo">League of Legends es un juego de estrategia por equipos, cada equipo compuesto de
+                        cinco campeones que se enfrentan para ver quién destruye antes la base del otro. En esta web
+                        encontrarás la información de 134 campeones; sin embargo, en el juego actual se puede elegir
+                        entre 140 campeones para realizar jugadas épicas, asesinar rivales y derribar torretas para
+                        alzarte con la victoria.</p>
+                </div>
+                <div class="container-video">
+                    <!-- Video de fondo -->
+                    <video id="videos-FondoLOL2" muted autoplay loop>
+                        <source src="./video/video_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="capa"></div>
+            </section>
+
+            <section class="page-section">
+                <div class="text-section">
+                    <!-- Título "CONOCE A ALGUNOS DE LOS CAMPEONES" -->
+                    <h1 id="text-juego3">CONOCE A ALGUNOS DE LOS CAMPEONES</h1>
+                    <!-- Párrafo vacío -->
+                    <p class="parrafo"></p>
+                </div>
+                <div id="algunosCampeones" class="card-algunosCampeones"></div>
+                <div class="container-video">
+                    <!-- Video de fondo -->
+                    <video id="videos-FondoLOL3" muted autoplay loop>
+                        <source src="./video/video_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="capa"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+    </footer>
+
+    <script src="juego.js" type="module"></script>
+</body>
+
+</html>

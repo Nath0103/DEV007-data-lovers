@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="css/dataCampeones.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Encabezado con barra negra -->
+    <header class="headerBarraNegra">
+        <!-- Enlace al inicio -->
+        <a href="index.html">
+            <img src="lol/47210.png" alt="logo" class="option-cursor logo-lol">
+        </a>
+        <nav class="container-menu">
+            <div class="option-menu">
+                <li class="">
+                    <button id="todosLosCampeones" class="filtrar-campeones option-cursor">Todos los campeones</button>
+                </li>
+                <select class="filtrar-campeones option-cursor" id="ordenar-select">
+                    <option class="option-cursor" value="asc">Ascendente</option>
+                    <option class="option-cursor" value="desc">Descendente</option>
+                </select>
+                <li class="">
+                    <button class="filtrar-campeones option-cursor" id="asesinos">Asesinos</button>
+                </li>
+                <li class="">
+                    <button class="filtrar-campeones option-cursor" id="luchadores">Luchadores</button>
+                </li>
+                <li class="">
+                    <button class="filtrar-campeones option-cursor" id="tanques">Tanques</button>
+                </li>
+                <li class="">
+                    <button class="filtrar-campeones option-cursor" id="magos">Magos</button>
+                </li>
+                <li class="">
+                    <button class="filtrar-campeones option-cursor" id="soporte">Soporte</button>
+                </li>
+                <li class="">
+                    <button class="filtrar-campeones option-cursor" id="tiradores">Tiradores</button>
+                </li>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="main-position">
+        <div id="campeones-card" class="grid-container"></div>
+    </main>
+
+
+    <footer class="footer"></footer>
+
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
