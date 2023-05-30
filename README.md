@@ -60,7 +60,7 @@ El proyecto se ha desarrollado utilizando HTML, CSS y Javascript basada en data 
 ![Página campeones](prototipo_alta2.JPG)
 ![Página información del juego](prototipo_alta3.JPG)
 
-# Versión para teléfonos
+#### Versión para teléfonos
 
 ![Phone](prototipo_alta_phone.JPG)
 
