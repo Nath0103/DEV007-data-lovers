@@ -1,11 +1,9 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  margin: 0;
   cursor: url(../lol/cursor/cursorpqueño.png), auto;
   background-color: #ffffff;
 }
@@ -33,9 +31,6 @@ h2 {
   color: #ffffff;
   font-family: inherit;
 }
-.letraMayusculas {
-  text-transform: uppercase;
-}
 
 .logo-lol {
   position: relative;
@@ -57,6 +52,7 @@ h2 {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .page-section {
@@ -182,124 +178,50 @@ h2 {
 }
 
 .cards:hover h4 {
-  bottom: 20px;
-}
-.imgs {
-  background-size: cover;
+  bottom: 25px;
 }
 
 /*----MEDIA QUERY---*/
 
-@media screen and (min-width: 375px) and (max-width: 667px) {
-  .headerBarraNegra {
-    width: 100%;
-    position: fixed;
-    display: flex;
-    background-color: #000000;
-    padding: 5px;
-    z-index: 5;
-  }
-  .position {
-    width: 100%;
-    position: fixed;
-  }
-  .letraFondoOscuro {
-    color: #ffffff;
-    font-family: inherit;
-  }
-  .letraMayusculas {
-    text-transform: uppercase;
-  }
+@media screen and (max-width: 768px) {
 
-  .logo-lol {
+  .page-section {
     position: relative;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    z-index: 3;
+    width: 768px;
   }
-
-  .footer {
-    background-color: #000000;
-    padding: 15px;
-    width: 100%;
-  }
-
-  #text-juego {
-    font-size: 20px;
-    font-style: italic;
-    text-align: center;
+  
+  .container-video {
     position: relative;
-    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #videos-FondoLOL1, #videos-FondoLOL2, #videos-FondoLOL3 {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #text-juego1, #text-juego2, #text-juego3 {
+    font-size: 60px;
+    position: relative;
     z-index: 3;
   }
 
   .parrafo {
-    width: 75%;
-    font-size: 5px;
-    margin-top: 20px;
-    padding: 1%;
-    font-weight: 100;
-    color: #ffffff;
+    width: 80%;
+    font-size: 20px;
     z-index: 3;
   }
 
-  .card-algunosCampeones {
-    display: flex;
-    flex-direction: row;
-    gap: 1%;
-    position: absolute;
-    align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    z-index: 4;
-  }
-
-  .cards {
-    background-color: #000000;
-    border: 1px solid #eb9d79;
-    border-radius: 5%;
-
-    position: relative;
-    width: 100%;
-    height: 100%;
-    flex: 1;
-
-    transition: flex 0.3, filter 0.3;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    filter: brightness(0.7) saturate(0.2) contrast(1) blur(2px);
-  }
-
-  .cards:hover {
-    filter: none;
-  }
-
   .cards img {
-    width: 8vh;
-    height: 10vh;
+    width: 16vh;
+    height: 18vh;
   }
 
   .cards h4 {
-    display: block;
     width: 50%;
-
-    font-size: 8px;
-    text-align: center;
-    color: #ffffff;
-    letter-spacing: 1px;
-    font-weight: bold;
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.5s;
-    text-shadow: 1px 5px 3px rgba(0, 0, 0, 0.3),
-      0px -3px 8px rgba(255, 255, 255, 0.3);
-  }
-
-  .cards:hover h4 {
-    bottom: 20px;
+    font-size: 17px;
   }
 }
+
