@@ -131,6 +131,7 @@ h2 {
   transform: translate(-50%, 20%);
   z-index: 4;
   cursor: url(../lol/cursor/21.png), auto;
+  
 }
 
 .cards {
@@ -153,11 +154,6 @@ h2 {
   filter: none;
 }
 
-/*.cards img {
-    margin-bottom: 5px;
-    border-radius: 5%;
-    align-items: center;
-  }*/
 
 .cards h4 {
   display: block;
@@ -179,60 +175,6 @@ h2 {
 
 .cards:hover h4 {
   bottom: 25px;
-}
-
-/*----MEDIA QUERY---*/
-@media screen and (min-width: 320px) {
-  .pageInfoGame {
-    display: flex;
-    min-width: 320px;
-  }
-  
-  .page-section {
-    min-width: 320px;
-    height: 100vh;
-    object-fit: contain;
-  } 
-
-  .text-section {
-    width: 50%;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  #text-juego1, #text-juego2, #text-juego3 {
-    font-size: 40px;
-  }
-  .parrafo {
-    width: 100%;
-    font-size: 12px;
-    margin: auto;
-    padding: 10%;
-  }
-  .card-algunosCampeones {
-    display: flex;
-    gap: 2%;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    z-index: 4;
-  }
-  .cards img {
-    width: 10vh;
-    height: 12vh;
-  }
-
-  .cards h4 {
-    width: 50%;
-    font-size: 12px;
-    align-items: center;
-    left: 50%;
-  }
 }
 
 
@@ -265,14 +207,14 @@ h2 {
     z-index: 3;
   }
 
-  .cards img {
-    width: 16vh;
-    height: 18vh;
-  }
+  /*.cards img {
+    width: 50vh;
+    height: 52vh;
+  }*/
 
   .cards h4 {
     width: 50%;
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
