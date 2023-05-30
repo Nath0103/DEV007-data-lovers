@@ -182,12 +182,63 @@ h2 {
 }
 
 /*----MEDIA QUERY---*/
+@media screen and (min-width: 320px) {
+  .pageInfoGame {
+    display: flex;
+    min-width: 320px;
+  }
+  
+  .page-section {
+    min-width: 320px;
+    height: 100vh;
+    object-fit: contain;
+  } 
 
-@media screen and (max-width: 768px) {
+  .text-section {
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #text-juego1, #text-juego2, #text-juego3 {
+    font-size: 40px;
+  }
+  .parrafo {
+    width: 100%;
+    font-size: 12px;
+    margin: auto;
+    padding: 10%;
+  }
+  .card-algunosCampeones {
+    display: flex;
+    gap: 2%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    z-index: 4;
+  }
+  .cards img {
+    width: 10vh;
+    height: 12vh;
+  }
 
+  .cards h4 {
+    width: 50%;
+    font-size: 12px;
+    align-items: center;
+    left: 50%;
+  }
+}
+
+
+@media screen and (min-width: 391px) and (max-width: 768px) {
   .page-section {
     position: relative;
-    width: 768px;
   }
   
   .container-video {
@@ -221,7 +272,7 @@ h2 {
 
   .cards h4 {
     width: 50%;
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
